@@ -25,7 +25,7 @@ def urlquery():
 		wRec = urllib2.urlopen(wReq)
 		wPage = wRec.read()
 
-		randomword = re.findall("<title>(.*) - Wikipedia, the free encyclopedia</title>", wPage)
+		randomword = re.findall("<title>(.*) .*- Wikipedia.*</title>", wPage)
 		print randomword[0]
 
 for num in range(1, 5):
